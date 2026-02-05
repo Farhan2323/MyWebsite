@@ -1,186 +1,218 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Farhan's Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Farhan Ahmed — Software Engineer</title>
+	<meta name="description" content="Farhan Ahmed — Software Engineer. CS at UIUC. Building web apps, exploring ML & AI." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+<body>
+	<!-- Sidebar nav (desktop) -->
+	<aside class="sidebar" aria-label="Main navigation">
+		<a href="#" class="sidebar__logo">FA</a>
+		<nav class="sidebar__nav">
+			<a href="#projects" class="sidebar__link">Projects</a>
+			<a href="#about" class="sidebar__link">About</a>
+			<a href="#contact" class="sidebar__link">Contact</a>
+		</nav>
+		<div class="sidebar__resume">
+			<a href="images/Farhan_Ahmed_Resume.pdf" class="sidebar__resume-link" target="_blank" rel="noopener">Resume</a>
+		</div>
+	</aside>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who I am</a></li>
-							<li><a href="#two">What I do</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
+	<!-- Mobile menu button -->
+	<button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+		<span class="menu-toggle__bar"></span>
+		<span class="menu-toggle__bar"></span>
+		<span class="menu-toggle__bar"></span>
+	</button>
+
+	<!-- Mobile overlay nav -->
+	<nav class="mobile-nav" aria-hidden="true">
+		<a href="#projects" class="mobile-nav__link">Projects</a>
+		<a href="#about" class="mobile-nav__link">About</a>
+		<a href="#contact" class="mobile-nav__link">Contact</a>
+		<a href="images/Farhan_Ahmed_Resume.pdf" class="mobile-nav__link" target="_blank" rel="noopener">Resume</a>
+	</nav>
+
+	<main class="main">
+		<!-- Hero -->
+		<section class="hero" id="hero">
+			<div class="hero__inner">
+				<div class="hero__content">
+					<h1 class="hero__name">Farhan Ahmed</h1>
+					<p class="hero__role">Software Engineer</p>
+					<p class="hero__tagline">Building web applications and exploring ML & AI. CS at UIUC · Headstarter Fellow.</p>
+					<a href="#projects" class="hero__cta">See my work</a>
 				</div>
-			</section>
+				<div class="hero__visual">
+					<img src="images/Good_pic.png" alt="Farhan Ahmed" class="hero__img" width="400" height="400" />
+				</div>
+			</div>
+		</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Welcome to My Website!</h1>
-							<p>Made by Farhan Ahmed<br />
-							 </p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/Good_pic.png" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>About Me</h2>
-									<p>Hey there! I'm Farhan, a student at the University of Illinois at Urbana-Champaign majoring in CS from the College of Grainger Engineering.
-										I have a passion for building web applications and other cool projects. 
-										Some of my areas of interest are Machine learning, AI, and Software Engineering. 
-										I enjoy working with modern technologies and continuously learning new skills to enhance my skill set. When I'm not coding, 
-										you can find me playing a variety of different sports, traveling, or reading up on tech news.</p>
-									<ul class="actions">
-										<!-- <li><a href="generic.html" class="button">Learn more</a></li> -->
-									</ul>
-								</div>
-							</div>
-						</section>
-						<!-- <section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							 <div class="content">
-								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div> -->
-						<!-- </section> -->
-						<!-- <section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section> -->
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What I do</h2>
-							<p>I am currently a Fellow at Headstarter which is a 7-week program that will help me learn skills to become a better SWE!</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Languages</h3>
-									<p>I currently know HTML, CSS, Python, C++, and JavaScript</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-book"></span>
-									<h3>Data Base Technologies</h3>
-									<p>I am comfortable with using the following database management languages: SQL, SQL Alchemy, MongoDB, Neo4j, Apache Kafka, Firebase</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-brain"></span>
-									<h3>Learning</h3>
-									<p>I am currently learning the basics of Machine Learning through Google's ML Crash Course. 
-										Throughout the Headstarter Fellowship, I will learn how to implement OpenAI's API into my personal projects. 
-									  I am also learning how to use ReactJS, NextJS, StripeAPI, and RAG.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Tools and Libraries</h3>
-									<p>I am comfortable with using the following development tools/libraries: Git, GitHub, NumPy, Pandas, Matplotlib, Python NLTK, Flask API, ReactJS, NextJS</p>
-								</section>
-								<!-- <section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section> -->
-								<!-- <section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section> -->
-							</div>
-							<ul class="actions">
-								<li><a href="images/Farhan_Ahmed_Resume.pdf" class="button">Check Out My Resume!</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>If you'd like to connect, feel free to send me an email!</p>
-							<div class="split style1">
-								<section>
-									<ul class="contact">
-										<li>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">Farhan2323.fa@gmail.com</a>
-										</li>
-										<li>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/Farhan2323" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.instagram.com/f1rh1n.23/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="https://www.linkedin.com/in/farhan-y-ahmed/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
+		<!-- Projects -->
+		<section class="projects" id="projects">
+			<div class="section-head">
+				<h2 class="section-head__title">Featured projects</h2>
+				<p class="section-head__sub">What I’ve built — repos, tech stack, and what I contributed.</p>
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li></li>
-					</ul>
+			<!-- Hero project (full-width row) -->
+			<article class="project project--hero">
+				<div class="project__media">
+					<div class="project__placeholder project__placeholder--hero">
+						<img src="images/CodeNames-Proj-Screenshot.png" alt="CodeNames Spy Master project screenshot" class="project__image">
+					</div>
 				</div>
-			</footer>
+				<div class="project__body">
+					<h3 class="project__title">CodeNames Spy Master</h3>
+					<p class="project__desc">An open-source full-stack web app for playing CodeNames with AI-powered clue generation. The core algorithm uses GloVe embeddings and cosine similarity to generate context-aware clues.</p>
+					<div class="project__stack">
+						<span>React</span>
+						<span>Python & Numpy</span>
+						<span>FastAPI</span>
+						<span>GloVe</span>
+					</div>
+					
+					<div class="project__links">
+						<a href="https://github.com/Farhan2323/CodeNames-Clue-Gen" target="_blank" rel="noopener" class="project__link">View repo</a>
+						<a href="https://code-names-clue-gen.vercel.app/" class="project__link project__link--secondary">Live demo</a>
+					</div>
+				</div>
+			</article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- Project 2 (image left, text right) -->
+			<article class="project project--alt">
+				<div class="project__media">
+					<div class="project__placeholder">
+						<img src="images/F1-Race-Strat.png" alt="F1 Race Strategy project screenshot" class="project__image">
 
-	</body>
+					</div>
+				</div>
+				<div class="project__body">
+					<h3 class="project__title">Project two</h3>
+					<p class="project__desc">Brief description of the second project — problem it solves and tech used.</p>
+					<div class="project__stack">
+						<span>Python</span>
+						<span>Flask</span>
+						<span>MongoDB</span>
+					</div>
+					<p class="project__built"><strong>What I built:</strong> Data pipeline and REST endpoints.</p>
+					<div class="project__links">
+						<a href="https://github.com/Farhan2323" target="_blank" rel="noopener" class="project__link">View repo</a>
+					</div>
+				</div>
+			</article>
+
+			<!-- Project 3 (text left, image right) -->
+			<article class="project">
+				<div class="project__media">
+					<div class="project__placeholder">
+						<span>Screenshot</span>
+					</div>
+				</div>
+				<div class="project__body">
+					<h3 class="project__title">Project three</h3>
+					<p class="project__desc">Third featured project — e.g. ML experiment, CLI tool, or open-source contribution.</p>
+					<div class="project__stack">
+						<span>Next.js</span>
+						<span>OpenAI API</span>
+					</div>
+					<p class="project__built"><strong>What I built:</strong> Full-stack integration and prompt layer.</p>
+					<div class="project__links">
+						<a href="https://github.com/Farhan2323" target="_blank" rel="noopener" class="project__link">View repo</a>
+					</div>
+				</div>
+			</article>
+		</section>
+
+		<!-- About + Tech -->
+		<section class="about" id="about">
+			<div class="section-head">
+				<h2 class="section-head__title">About &amp; tech</h2>
+			</div>
+			<div class="about__grid">
+				<div class="about__bio">
+					<div class="about__pic-wrap">
+						<img src="images/MyPic.jpeg" alt="" class="about__pic" width="240" height="240" />
+					</div>
+					<h3 class="about__heading">Who I am</h3>
+					<p>I’m Farhan, a CS student at the University of Illinois Urbana-Champaign (Grainger College of Engineering). I love building web applications and exploring machine learning and AI. I’m a Headstarter Fellow and enjoy working with modern tech and learning new skills. When I’m not coding, I’m usually playing sports, traveling, or keeping up with tech news.</p>
+					<a href="images/Farhan_Ahmed_Resume.pdf" class="about__resume" target="_blank" rel="noopener">Download resume</a>
+				</div>
+				<div class="about__tech">
+					<div class="tech-block">
+						<h4 class="tech-block__title">Comfortable with</h4>
+						<ul class="tech-list">
+							<li>HTML, CSS, JavaScript</li>
+							<li>Python, C++</li>
+							<li>React, Next.js</li>
+							<li>SQL, SQLAlchemy, MongoDB, Neo4j</li>
+							<li>Firebase, Apache Kafka</li>
+							<li>Git, GitHub</li>
+							<li>Flask, NumPy, Pandas, Matplotlib</li>
+							<li>Python NLTK</li>
+						</ul>
+					</div>
+					<div class="tech-block">
+						<h4 class="tech-block__title">Currently learning</h4>
+						<ul class="tech-list tech-list--learning">
+							<li>Machine Learning (Google ML Crash Course)</li>
+							<li>OpenAI API integration</li>
+							<li>React, Next.js, Stripe API</li>
+							<li>RAG</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section class="contact" id="contact">
+			<div class="contact__inner">
+				<h2 class="contact__title">Get in touch</h2>
+				<p class="contact__text">Recruiters and engineers — I’d love to connect.</p>
+				<div class="contact__links">
+					<a href="https://github.com/Farhan2323" target="_blank" rel="noopener" class="contact__link" aria-label="GitHub">
+						<span class="contact__icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+						<span>GitHub</span>
+					</a>
+					<a href="https://www.linkedin.com/in/farhan-y-ahmed/" target="_blank" rel="noopener" class="contact__link" aria-label="LinkedIn">
+						<span class="contact__icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span>
+						<span>LinkedIn</span>
+					</a>
+					<a href="mailto:Farhan2323.fa@gmail.com" class="contact__link" aria-label="Email">
+						<span class="contact__icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+						<span>Email</span>
+					</a>
+					<a href="https://www.instagram.com/f1rh1n.23/" target="_blank" rel="noopener" class="contact__link" aria-label="Instagram">
+						<span class="contact__icon" aria-hidden="true"><i class="fab fa-instagram"></i></span>
+						<span>Instagram</span>
+					</a>
+					<a href="https://x.com/Farhan2323" target="_blank" rel="noopener" class="contact__link" aria-label="X (Twitter)">
+						<span class="contact__icon" aria-hidden="true"><i class="fab fa-twitter"></i></span>
+						<span>X</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<p class="footer__copy">&copy; <span id="year"></span> Farhan Ahmed</p>
+			<div class="footer__links">
+				<a href="https://github.com/Farhan2323" target="_blank" rel="noopener">GitHub</a>
+				<a href="https://www.linkedin.com/in/farhan-y-ahmed/" target="_blank" rel="noopener">LinkedIn</a>
+			</div>
+		</footer>
+	</main>
+
+	<script src="assets/js/portfolio.js"></script>
+</body>
 </html>
