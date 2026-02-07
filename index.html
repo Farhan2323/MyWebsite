@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script>
+        function log_console() {
+            console.log("'Hello there' - Obi Wan Kenobi" );
+        }
+    </script>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Farhan Ahmed — Software Engineer</title>
@@ -11,19 +16,32 @@
 	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 	<link rel="stylesheet" href="assets/css/portfolio.css" />
 </head>
-<body>
-	<!-- Sidebar nav (desktop) -->
-	<aside class="sidebar" aria-label="Main navigation">
-		<a href="#" class="sidebar__logo">FA</a>
-		<nav class="sidebar__nav">
-			<a href="#projects" class="sidebar__link">Projects</a>
-			<a href="#about" class="sidebar__link">About</a>
-			<a href="#contact" class="sidebar__link">Contact</a>
+<body onload="log_console()">
+	<!-- Top bar nav (desktop) -->
+	<header class="header">
+		<a href="#hero" class="header__logo">FA</a>
+		<nav class="header__nav" aria-label="Main navigation">
+			<a href="#projects" class="header__link">Projects</a>
+			<a href="#about" class="header__link">About</a>
+			<a href="#contact" class="header__link">Contact</a>
+			<a href="images/Farhan_Ahmed_Resume.pdf" class="header__link header__link--resume" target="_blank" rel="noopener">Resume</a>
 		</nav>
-		<div class="sidebar__resume">
-			<a href="images/Farhan_Ahmed_Resume.pdf" class="sidebar__resume-link" target="_blank" rel="noopener">Resume</a>
+		<div class="header__themes" aria-label="Color scheme">
+			<button type="button" class="theme-btn" data-theme="default" title="Default (light)">Default</button>
+			<button type="button" class="theme-btn" data-theme="navy-gold" title="Deep Navy & Gold">Navy & Gold</button>
+			<button type="button" class="theme-btn" data-theme="emerald" title="Monochrome Emerald">Emerald</button>
+			<button type="button" class="theme-btn" data-theme="midnight" title="Midnight Blue">Midnight</button>
+			<button type="button" class="theme-btn" data-theme="warm" title="Warm Minimalism">Warm</button>
+			<button type="button" class="theme-btn" data-theme="arctic" title="Arctic Premium">Arctic</button>
+			<button type="button" class="theme-btn" data-theme="burgundy" title="Burgundy Elegance">Burgundy</button>
+			<button type="button" class="theme-btn" data-theme="olive-terracotta" title="Olive & Terracotta">Olive</button>
+			<button type="button" class="theme-btn" data-theme="coffee" title="Coffee House Premium">Coffee</button>
+			<button type="button" class="theme-btn" data-theme="forest" title="Forest & Cream">Forest</button>
+			<button type="button" class="theme-btn" data-theme="burgundy-navy" title="Burgundy & Navy">Burgundy-Navy</button>
+			<button type="button" class="theme-btn" data-theme="jewel" title="Muted Jewel Tones">Jewel</button>
+			<button type="button" class="theme-btn" data-theme="tobacco" title="Tobacco & Parchment">Tobacco</button>
 		</div>
-	</aside>
+	</header>
 
 	<!-- Mobile menu button -->
 	<button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -47,7 +65,7 @@
 				<div class="hero__content">
 					<h1 class="hero__name">Farhan Ahmed</h1>
 					<p class="hero__role">Software Engineer</p>
-					<p class="hero__tagline">Building web applications and exploring ML & AI. CS at UIUC · Headstarter Fellow.</p>
+					<p class="hero__tagline">Building web applications and exploring ML & AI solutions<br> CS UIUC Alumni '25 </p>
 					<a href="#projects" class="hero__cta">See my work</a>
 				</div>
 				<div class="hero__visual">
@@ -98,7 +116,7 @@
 					</div>
 				</div>
 				<div class="project__body">
-					<h3 class="project__title">F1 Race Strategy</h3>
+					<h3 class="project__title">F1 Race Strategy Optimization Engine</h3>
 					<p class="project__desc">A machine learning program that predicts the optimal race pit stop strategy, given 1-stop or 2-stop, based on data from 2023 and 2024 F1 seasons. Also gives lap by 
 						lap predictions along with visualizations.</p>
 					<div class="project__stack">
@@ -119,19 +137,22 @@
 			<article class="project">
 				<div class="project__media">
 					<div class="project__placeholder">
-						<span>Screenshot</span>
+						<img src="images/RukuAppIcon.png" alt="Ruku app icon" class="project__image">
 					</div>
 				</div>
 				<div class="project__body">
-					<h3 class="project__title">Project three</h3>
-					<p class="project__desc">Third featured project — e.g. ML experiment, CLI tool, or open-source contribution.</p>
+					<h3 class="project__title">Ruku</h3>
+					<p class="project__desc">Ruku is an IOS mobile app to help you stay connected to Islam with prayer times, Quran, supplications, and daily reminders!</p>
 					<div class="project__stack">
-						<span>Next.js</span>
-						<span>OpenAI API</span>
+						<span>TypeScript</span>
+						<span>JavaScript</span>
+						<span>Swift</span>
+						<span>IOS</span>
+						<span>PostgreSQL</span>
 					</div>
-					<p class="project__built"><strong>What I built:</strong> Full-stack integration and prompt layer.</p>
+					<p class="project__built"><strong>What I built:</strong> Home and lock screen widgets to help users keep track of prayer times and reminders.</p>
 					<div class="project__links">
-						<a href="https://github.com/Farhan2323" target="_blank" rel="noopener" class="project__link">View Repo</a>
+						<a href="https://apps.apple.com/us/app/ruku/id6756390171" target="_blank" rel="noopener" class="project__link">View In App Store</a>
 					</div>
 				</div>
 			</article>
@@ -145,32 +166,58 @@
 			<div class="about__grid">
 				<div class="about__bio">
 					<div class="about__pic-wrap">
-						<img src="images/MyPic.jpeg" alt="" class="about__pic" width="240" height="240" />
+						
 					</div>
 					<h3 class="about__heading">Who I am</h3>
-					<p>I’m Farhan, a CS student at the University of Illinois Urbana-Champaign (Grainger College of Engineering). I love building web applications and exploring machine learning and AI. I’m a Headstarter Fellow and enjoy working with modern tech and learning new skills. When I’m not coding, I’m usually playing sports, traveling, or keeping up with tech news.</p>
-					<a href="images/Farhan_Ahmed_Resume.pdf" class="about__resume" target="_blank" rel="noopener">Download resume</a>
+					<p>I’m Farhan, a CS alumni from the University of Illinois at Urbana-Champaign (Grainger College of Engineering).
+						I love building web applications and exploring machine learning and AI. 
+						I am currently looking for full-time opportunities in software engineering. I enjoy working with modern tech and learning new skills.
+						When I’m not coding, I’m usually playing sports, traveling, or keeping up with tech news.</p>
+					<a href="images/Farhan_Ahmed_Resume.pdf" class="about__resume" target="_blank" rel="noopener">View resume</a>
 				</div>
 				<div class="about__tech">
 					<div class="tech-block">
 						<h4 class="tech-block__title">Comfortable with</h4>
-						<ul class="tech-list">
-							<li>HTML, CSS, JavaScript</li>
-							<li>Python, C++</li>
-							<li>React, Next.js</li>
-							<li>SQL, SQLAlchemy, MongoDB, Neo4j</li>
-							<li>Firebase, Apache Kafka</li>
-							<li>Git, GitHub</li>
-							<li>Flask, NumPy, Pandas, Matplotlib</li>
-							<li>Python NLTK</li>
-						</ul>
+						<div class="tech-group">
+							<span class="tech-group__label">Languages</span>
+							<ul class="tech-list">
+								<li>HTML, CSS, JavaScript</li>
+								<li>Python, C++, Java</li>
+								<li>TypeScript, Swift</li>
+							</ul>
+						</div>
+						<div class="tech-group">
+							<span class="tech-group__label">Frameworks & runtime</span>
+							<ul class="tech-list">
+								<li>React</li>
+								<li>Next.js</li>
+								<li>Node.js, Express</li>
+								<li>Flask</li>
+							</ul>
+						</div>
+						<div class="tech-group">
+							<span class="tech-group__label">Data & infra</span>
+							<ul class="tech-list">
+								<li>SQL, PostgreSQL</li>
+								<li>SQLAlchemy, MongoDB, Neo4j</li>
+								<li>Firebase, Apache Kafka</li>
+							</ul>
+						</div>
+						<div class="tech-group">
+							<span class="tech-group__label">Tools & libraries</span>
+							<ul class="tech-list">
+								<li>Git, GitHub</li>
+								<li>NumPy, Pandas, Matplotlib</li>
+								<li>NLTK, NLP, Scikit-Learn</li>
+								<li>REST APIs</li>
+							</ul>
+						</div>
 					</div>
 					<div class="tech-block">
 						<h4 class="tech-block__title">Currently learning</h4>
 						<ul class="tech-list tech-list--learning">
-							<li>Machine Learning (Google ML Crash Course)</li>
-							<li>OpenAI API integration</li>
-							<li>React, Next.js, Stripe API</li>
+							<li>Machine Learning</li>
+							<li>Agentic AI & workflow automation</li>
 							<li>RAG</li>
 						</ul>
 					</div>
@@ -200,22 +247,13 @@
 						<span class="contact__icon" aria-hidden="true"><i class="fab fa-instagram"></i></span>
 						<span>Instagram</span>
 					</a>
-					<a href="https://x.com/Farhan2323" target="_blank" rel="noopener" class="contact__link" aria-label="X (Twitter)">
+					<a href="https://x.com/FYA243" target="_blank" rel="noopener" class="contact__link" aria-label="X (Twitter)">
 						<span class="contact__icon" aria-hidden="true"><i class="fab fa-twitter"></i></span>
 						<span>X</span>
 					</a>
 				</div>
 			</div>
 		</section>
-
-		<!-- Footer -->
-		<footer class="footer">
-			<p class="footer__copy">&copy; <span id="year"></span> Farhan Ahmed</p>
-			<div class="footer__links">
-				<a href="https://github.com/Farhan2323" target="_blank" rel="noopener">GitHub</a>
-				<a href="https://www.linkedin.com/in/farhan-y-ahmed/" target="_blank" rel="noopener">LinkedIn</a>
-			</div>
-		</footer>
 	</main>
 
 	<script src="assets/js/portfolio.js"></script>

@@ -1,6 +1,50 @@
 (function () {
 	'use strict';
 
+	var THEME_STORAGE_KEY = 'portfolio-theme';
+
+	function getTheme() {
+		try {
+			return localStorage.getItem(THEME_STORAGE_KEY) || 'default';
+		} catch (e) {
+			return 'default';
+		}
+	}
+
+	function setTheme(value) {
+		try {
+			if (value === 'default') {
+				localStorage.removeItem(THEME_STORAGE_KEY);
+			} else {
+				localStorage.setItem(THEME_STORAGE_KEY, value);
+			}
+		} catch (e) {}
+	}
+
+	function applyTheme(theme) {
+		var html = document.documentElement;
+		if (theme === 'default') {
+			html.removeAttribute('data-theme');
+		} else {
+			html.setAttribute('data-theme', theme);
+		}
+		document.querySelectorAll('.theme-btn').forEach(function (btn) {
+			btn.classList.toggle('is-active', btn.getAttribute('data-theme') === theme);
+		});
+	}
+
+	// Apply saved theme on load
+	applyTheme(getTheme());
+
+	// Theme button clicks
+	document.querySelectorAll('.theme-btn').forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			var theme = this.getAttribute('data-theme');
+			applyTheme(theme);
+			setTheme(theme);
+		});
+	});
+
 	// Mobile menu toggle
 	var menuToggle = document.querySelector('.menu-toggle');
 	var mobileNav = document.querySelector('.mobile-nav');
@@ -61,9 +105,4 @@
 		});
 	}
 
-	// Footer year
-	var yearEl = document.getElementById('year');
-	if (yearEl) {
-		yearEl.textContent = new Date().getFullYear();
-	}
 })();
