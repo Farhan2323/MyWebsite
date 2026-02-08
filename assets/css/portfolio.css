@@ -46,7 +46,7 @@
 
 /* Theme: Monochrome with Emerald Pop */
 [data-theme="emerald"] {
-	--color-bg: #000000;
+	--color-bg: #4c543c;
 	--color-bg-elevated: #0F172A;
 	--color-text: #FFFFFF;
 	--color-text-muted: #94a3b8;
@@ -93,15 +93,15 @@
 
 /* Theme: Arctic Premium */
 [data-theme="arctic"] {
-	--color-bg: #0F1419;
-	--color-bg-elevated: #1E293B;
+	--color-bg: #0A1128;
+	--color-bg-elevated: #132042;
 	--color-text: #E2E8F0;
 	--color-text-muted: #94a3b8;
-	--color-accent: #38BDF8;
+	--color-accent: #2577f9;
 	--color-accent-hover: #8B5CF6;
 	--color-border: #334155;
 	--color-border-light: #475569;
-	--contact-bg: #38BDF8;
+	--contact-bg: #2577f9;
 	--contact-text: #0F1419;
 }
 
