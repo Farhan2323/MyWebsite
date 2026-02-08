@@ -26,15 +26,6 @@
 			<a href="#contact" class="header__link">Contact</a>
 			<a href="images/Farhan_Ahmed_Resume.pdf" class="header__link header__link--resume" target="_blank" rel="noopener">Resume</a>
 		</nav>
-		<div class="header__themes" aria-label="Color scheme">
-			<button type="button" class="theme-btn" data-theme="navy-gold" title="Deep Navy & Gold">Navy & Gold</button>
-			<button type="button" class="theme-btn" data-theme="emerald" title="Monochrome Emerald">Emerald</button>
-			<button type="button" class="theme-btn" data-theme="arctic" title="Arctic Premium">Arctic</button>
-			<button type="button" class="theme-btn" data-theme="burgundy" title="Burgundy Elegance">Burgundy</button>
-			<button type="button" class="theme-btn" data-theme="olive-terracotta" title="Olive & Terracotta">Olive</button>
-			<button type="button" class="theme-btn" data-theme="coffee" title="Coffee House Premium">Coffee</button>
-			<button type="button" class="theme-btn" data-theme="burgundy-navy" title="Burgundy & Navy">Burgundy-Navy</button>
-		</div>
 	</header>
 
 	<!-- Mobile menu button -->
@@ -55,6 +46,7 @@
 	<main class="main">
 		<!-- Hero -->
 		<section class="hero" id="hero">
+			<div class="constellation-bg" aria-hidden="true"><canvas id="constellation-hero"></canvas></div>
 			<div class="hero__inner">
 				<div class="hero__content">
 					<h1 class="hero__name">Farhan Ahmed</h1>
@@ -70,6 +62,7 @@
 
 		<!-- Projects -->
 		<section class="projects" id="projects">
+			<div class="constellation-bg" aria-hidden="true"><canvas id="constellation-projects"></canvas></div>
 			<div class="section-head">
 				<h2 class="section-head__title">Featured projects</h2>
 				<p class="section-head__sub">What I’ve built — repos, tech stack, and what I contributed.</p>
@@ -250,6 +243,7 @@
 		</section>
 	</main>
 
+	<script src="assets/js/constellation.js"></script>
 	<script src="assets/js/portfolio.js"></script>
 </body>
 </html>

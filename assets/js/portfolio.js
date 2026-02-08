@@ -1,49 +1,64 @@
 (function () {
 	'use strict';
 
-	var THEME_STORAGE_KEY = 'portfolio-theme';
+	// Premium project cards: inject background layer and mouse-parallax 3D tilt
+	var projects = document.querySelectorAll('.project');
+	var maxTilt = 6; // degrees (5–8 range)
+	var parallax = { bg: 0.25, media: 1, body: 0.5 };
 
-	function getTheme() {
-		try {
-			return localStorage.getItem(THEME_STORAGE_KEY) || 'default';
-		} catch (e) {
-			return 'default';
-		}
-	}
-
-	function setTheme(value) {
-		try {
-			if (value === 'default') {
-				localStorage.removeItem(THEME_STORAGE_KEY);
-			} else {
-				localStorage.setItem(THEME_STORAGE_KEY, value);
-			}
-		} catch (e) {}
-	}
-
-	function applyTheme(theme) {
-		var html = document.documentElement;
-		if (theme === 'default') {
-			html.removeAttribute('data-theme');
-		} else {
-			html.setAttribute('data-theme', theme);
-		}
-		document.querySelectorAll('.theme-btn').forEach(function (btn) {
-			btn.classList.toggle('is-active', btn.getAttribute('data-theme') === theme);
+	function injectProjectBg() {
+		projects.forEach(function (card) {
+			if (card.querySelector('.project__bg')) return;
+			var bg = document.createElement('div');
+			bg.className = 'project__bg';
+			bg.setAttribute('aria-hidden', 'true');
+			card.insertBefore(bg, card.firstChild);
 		});
 	}
 
-	// Apply saved theme on load
-	applyTheme(getTheme());
+	function setTilt(card, xNorm, yNorm) {
+		var rx = -yNorm * maxTilt;
+		var ry = xNorm * maxTilt;
+		card.style.setProperty('--rx-bg', rx * parallax.bg + 'deg');
+		card.style.setProperty('--ry-bg', ry * parallax.bg + 'deg');
+		card.style.setProperty('--rx-media', rx * parallax.media + 'deg');
+		card.style.setProperty('--ry-media', ry * parallax.media + 'deg');
+		card.style.setProperty('--rx-body', rx * parallax.body + 'deg');
+		card.style.setProperty('--ry-body', ry * parallax.body + 'deg');
+	}
 
-	// Theme button clicks
-	document.querySelectorAll('.theme-btn').forEach(function (btn) {
-		btn.addEventListener('click', function () {
-			var theme = this.getAttribute('data-theme');
-			applyTheme(theme);
-			setTheme(theme);
+	function handleMove(e, card) {
+		var rect = card.getBoundingClientRect();
+		var x = (e.clientX - rect.left) / rect.width - 0.5;
+		var y = (e.clientY - rect.top) / rect.height - 0.5;
+		x = Math.max(-0.5, Math.min(0.5, x)) * 2;
+		y = Math.max(-0.5, Math.min(0.5, y)) * 2;
+		setTilt(card, x, y);
+	}
+
+	function handleLeave(card) {
+		setTilt(card, 0, 0);
+	}
+
+	function prefersReducedMotion() {
+		return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	}
+
+	injectProjectBg();
+	if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) {
+		// No mouse parallax on small screens (CSS already disables 3D)
+	} else if (!prefersReducedMotion()) {
+		projects.forEach(function (card) {
+			var boundMove = function (e) { handleMove(e, card); };
+			card.addEventListener('mouseenter', function () {
+				card.addEventListener('mousemove', boundMove);
+			});
+			card.addEventListener('mouseleave', function () {
+				card.removeEventListener('mousemove', boundMove);
+				handleLeave(card);
+			});
 		});
-	});
+	}
 
 	// Mobile menu toggle
 	var menuToggle = document.querySelector('.menu-toggle');
