@@ -516,11 +516,11 @@ a:hover {
 	z-index: -1;
 	pointer-events: none;
 	animation: breathing-glow 5s ease-in-out infinite;
-	transition: animation-duration 0.4s ease-in-out;
+	transition: animation-duration 1s ease-in-out;
 }
 .project:hover::before,
 .project:focus-within::before {
-	animation: breathing-glow-hover 8s ease-in-out infinite;
+	animation: breathing-glow-hover 3s ease-in-out infinite;
 	will-change: box-shadow;
 }
 
